@@ -54,9 +54,5 @@ pipeline {
         failure {
             echo "Pipeline failed."
         }
-        always {
-            sh 'docker-compose down || true'
-            sh 'docker image prune -f || true'
-        }
     }
 }
